@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
+import {withSerwist} from "@serwist/turbopack";
 
-const nextConfig: NextConfig = {
+// const withSerwiste = withSerwist({
+//   swDest: "public/sw.ts",
+//   swSrc: "app/sw.ts",
+//   disable: false,
+// });
+
+const nextConfig: NextConfig = { 
+   experimental: {
+    serverActions: {
+      bodySizeLimit: '20mb',
+    },
+  },
   /* config options here */
 };
 
-export default nextConfig;
+export default withSerwist(nextConfig);

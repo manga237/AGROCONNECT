@@ -1,0 +1,9 @@
+.page{
+ color: aquamarine;
+ font-weight: 600;
+  background-color: dodgerblue;
+}
+.page2{
+  padding: 2rem;
+  border-radius: 1rem;
+}
